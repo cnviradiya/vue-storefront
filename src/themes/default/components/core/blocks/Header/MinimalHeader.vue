@@ -23,7 +23,7 @@
           <div class="col-sm-4 col-xs-4 center-xs">
             <div>
               <a class="no-underline inline-flex" href="/" data-testid="logo">
-                <img width="auto" height="41px" src="/assets/logo.svg" alt="Vuestore logo">
+                <img width="auto" height="41px" src="/assets/logo.svg" :alt="$t(defaultTitle)">
               </a>
             </div>
           </div>
@@ -40,9 +40,17 @@
 
 <script>
 import CurrentPage from 'theme/mixins/currentPage'
+import { currentStoreView } from '@vue-storefront/core/lib/multistore'
+import config from 'config'
 
 export default {
-  mixins: [CurrentPage]
+  mixins: [CurrentPage],
+  data () {
+    const storeView = currentStoreView()
+    return {
+      defaultTitle: storeView.seo.defaultTitle ? storeView.seo.defaultTitle : 'Vuestore'
+    }
+  }
 }
 </script>
 

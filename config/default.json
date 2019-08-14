@@ -25,7 +25,8 @@
   },
   "seo": {
     "useUrlDispatcher": true,
-    "disableUrlRoutesPersistentCache": true
+    "disableUrlRoutesPersistentCache": true,
+    "defaultTitle": "Vuestore"
   },
   "console": {
     "showErrorOnProduction" : false,
@@ -126,6 +127,9 @@
         "currencyCode": "EUR",
         "currencySign": "EUR",
         "dateFormat": "HH:mm D-M-YYYY"
+      },
+      "seo": {
+        "defaultTitle": "Vuestore"
       }
     },
     "it": {
@@ -149,6 +153,9 @@
         "defaultCountry": "IT",
         "defaultLanguage": "IT",
         "defaultLocale": "it-IT"
+      },
+      "seo": {
+        "defaultTitle": "Vuestore"
       }
     }
   },
